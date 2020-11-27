@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尚品汇 商品详情</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-left">
+                <span>欢迎来到尚品汇，请</span>
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+            </div>
+            <nav class="topbar-right">
+                <a href="javascript:;">我的订单</a>
+                <a href="javascript:;">我的购物车</a>
+                <a href="javascript:;">我的尚品汇</a>
+                <a href="javascript:;">尚品汇会员</a>
+                <a href="javascript:;">企业采购</a>
+                <a href="javascript:;">关注尚品汇</a>
+            </nav>
+        </div>
+    </div>
+    <!-- 页面头部 -->
+    <header class="page-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="">
+                        <img src="./images/Logo.png" alt="">
+                    </a>
+                </div>
+                <form action="" class="search">
+                    <input type="text">
+                    <button>搜索</button>
+                </form>
+            </div>
+    </header>
+    <!-- 页面导航菜单 -->
+    <div class="page-nav">
+        <div class="container">
+            <div class="all-type">
+                全部商品分类
+            </div>
+            <div class="nav">
+                <a href="javascript:;">服装城</a>
+                <a href="javascript:;">服装城</a>
+                <a href="javascript:;">服装城</a>
+                <a href="javascript:;">服装城</a>
+                <a href="javascript:;">服装城</a>
+                <a href="javascript:;">服装城</a>
+                <a href="javascript:;">服装城</a>
+            </div>
+        </div>
+    </div>
+    <!-- 商品信息 -->
+    <div class="product">
+        <div class="container">
+            <!-- 路径导航 -->
+            <div class="breadcurmb">
+                <a href="javascripy:;">手机、数码、通讯</a>
+                <a href="javascripy:;">手机</a>
+                <a href="javascripy:;">Apple苹果</a>
+                <a >iphone6S系类</a>
+            </div>
+            <!-- 放大镜和商品参数价格 -->
+            <div class="product-intro">
+               <!-- 左边商品查看部分 -->
+                <div class="preview">
+                     <!-- 放大镜 -->
+                    <div class="zoom-box" id="zoomBox">
+                        <div class="small-image" id="smallImageBox">
+                            <img src="./images/s1.png" alt="" id="smallImage">
+                            <div class="zoom" id="zoom"></div>
+                        </div>
+                        <div class="big-image" id="bigImageBox">
+                            <img src="./images/b1.png" alt="" id="bigImage">
+                        </div>
+                    </div>
+                    <!-- 缩略图 -->
+                    <div class="thumb">
+                        <div class="arrow-left" id="arrowLeft">&lt;</div>
+                        <div class="thumb-box" id="thumbBox">
+                            <div class="thumb-list" id="thumbWrapper">
+                                <!-- <img src="./images/s1.png" alt=""> -->
+                            </div>
+                        </div>
+                        <div class="arrow-right" id="arrowRight">&gt;</div>
+                    </div>
+                </div>
+                 <!-- 商品价格信息 -->
+                <div class="buy">
+                    <div class="buy-top">
+                        <h3 class="product-title" id="productTitle"></h3>
+                        <p class="product-news" id="productNews"></p>
+                        <div class="price-area">
+                            <div class="price-area-row">
+                                <span class="price-title">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</span>
+                                <div class="price">
+                                    <span>&yen;</span>
+                                    <span id="price"></span>
+                                    <span>降价通知</span>
+                                    
+                                </div>
+                                <span class="comment" id="comment"></span>
+                            </div>
+                            <div class="price-area-row">
+                                <span class="price-title">促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</span>
+                                <div class="price-content" id="priceContent">
+                                    <span class="badge"> </span> 
+                                    <span ></span> 
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="support">
+                            <div class="support-row">
+                                <div class="support-title">支持</div>
+                                <div class="support-content" id="supportContent"></div>
+                            </div>
+                            <div class="support-row">
+                                <div class="support-title">配送至</div>
+                                <div class="support-content" id="address"></div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="buy-bottom">
+                        <div class="choose" id="choose">
+                            <div class="selected-list" id="selectedList">
+                              
+                            </div>
+             
+                        </div>
+                        <div class="shopcart">
+                            <div class="shopcart-num">
+                                <input type="text" value="1" id="inputBox">
+                                <button class="plus" id="plus">+</button>
+                                <button class="reduce" id="reduce">-</button>
+                            </div>
+                            <div class="shopcart-btn">
+                                <button>加入购物车</button>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <!-- 商品详情 -->
+           <div class="product-detail">
+               <aside class="asidebar" id="asideBar">
+                   <div class="tab-title" id="tabTitle">
+                       <h4 class="active">相关分类</h4>
+                       <h4>推荐品牌</h4>
+                   </div>
+                   <div class="tab-content" id="tabContent">
+                       <div class="tab-item active">
+                           <ul class="category">
+                                <li>手机</li>
+                                <li>手机壳</li>
+                                <li>内存卡</li>
+                                <li>Iphone配件</li>
+                                <li>贴膜</li>
+                                <li>手机耳机</li>
+                                <li>移动电源</li>
+                                <li>平板电脑</li>
+                           </ul>
+                           <ul class="product">
+                               <li>   
+                                    <img src="./images/part01.png" alt="">
+                                    <p>Apple苹果iPhone 6s (A1699)</p>
+                                    <p class="product-price">&yen;6088</p>
+                                    <div  class="add-btn">
+                                        <a href="javascript:;">添加购物车</a>
+                                    </div>
+                                </li>
+                                <li>   
+                                    <img src="./images/part02.png" alt="">
+                                    <p>Apple苹果iPhone 6s (A1699)</p>
+                                    <p class="product-price">&yen;6088</p>
+                                    <div class="add-btn">
+                                        <a href="javascript:;">添加购物车</a>
+                                    </div>
+                                </li>
+                                <li>   
+                                    <img src="./images/part03.png" alt="">
+                                    <p>Apple苹果iPhone 6s (A1699)</p>
+                                    <p class="product-price">&yen;6088</p>
+                                    <div  class="add-btn">
+                                        <a href="javascript:;">添加购物车</a>
+                                    </div>
+                                </li>
+                           </ul>
+                       </div>
+                       <div class="tab-item">
+                           <p>推荐品牌</p>
+                       </div>
+                   </div>
+               </aside>
+               <div class="detail">
+                   <div class="collection">
+                       <div class="title">
+                           <p>选择搭配</p>
+                       </div>
+                       <div class="collection-content">
+                           <div class="main">
+                               <img src="./images/l-m01.png" alt="">
+                               <p class="price" id="totallPriceBox">5299</p>
+                           </div>
+                           <ul class="select" id="selectBox">
+                                <li>
+                                    <img src="./images/dp01.png" alt="">
+                                    <p>Feless费勒斯VR</p>
+                                    <div class="check">
+                                        <input type="checkbox" data-change-price="39">
+                                        <span>39</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="./images/dp02.png" alt="">
+                                    <p>Feless费勒斯VR</p>
+                                    <div class="check">
+                                        <input type="checkbox" data-change-price="50">
+                                        <span>50</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="./images/dp03.png" alt="">
+                                    <p>Feless费勒斯VR</p>
+                                    <div class="check">
+                                        <input type="checkbox" data-change-price="59">
+                                        <span>59</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="./images/dp04.png" alt="">
+                                    <p>Feless费勒斯VR</p>
+                                    <div class="check">
+                                        <input type="checkbox" data-change-price="99">
+                                        <span>99</span>
+                                    </div>
+                                </li>
+                           </ul>
+                           <div class="result">
+                                <p class="result-num" id="resultNum" > 已选购0件商品</p>
+                                <p class="result-title">套餐价</p>
+                                <p class="result-price" id="resultPrice">&yen;5299</p>
+                                <button>加入购物车</button>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="introduct" id="introduct">
+                       <div class="title">
+                           <ul>
+                               <li class="active">商品介绍</li>
+                               <li>包装与规格</li>
+                               <li>售后保障</li>
+                               <li>商品评价</li>
+                               <li>手机社区</li>
+                           </ul>
+                       </div>
+                       <div class="content">
+                           <div class="item active">
+                               <ul>
+                                    <li>分辨率：1920*1080(FHD)</li>
+                                    <li>后置摄像头：1200万像素</li>
+                                    <li>前置摄像头：500万像素</li>
+                                    <li>核 数：其他</li>
+                                    <li>频 率：以官网信息为准</li>
+                                    <li>品牌： Apple</li>
+                                    <li>商品名称：APPLEiPhone 6s Plus</li>
+                                    <li>商品编号：1861098</li>
+                                    <li>商品产地：中国大陆</li>
+                                    <li>商品毛重：0.51kg</li>
+                                    <li>热点：指纹识别，Apple Pay，金属机身，拍照神器</li>
+                                    <li>系统：苹果（IOS）</li>
+                                    <li>像素：1000-1600万品毛重：0.51kg</li>
+                                    <li>机身内存：64GB</li>
+                                    <li><img src="./images/intro01.png" alt=""></li>
+                                    <li><img src="./images/intro02.png" alt=""></li>
+                                    <li><img src="./images/intro03.png" alt=""></li>
+                                </ul>
+                            </div>
+                            <div class="item">包装与规格</div>
+                            <div class="item">包装与规格</div>
+                            <div class="item">包装与规格</div>
+                            <div class="item">包装与规格</div>
+                            
+                            
+                       </div>
+                      
+                        
+                    </div>
+
+                   </div>
+               </div>
+
+           </div>
+        </div>
+    </div>
+
+
+    <!-- 猜你喜欢 -->
+    <div class="recommend">
+        <div class="container">
+                <h3 class="title">猜你喜欢</h3>
+                <ul class="content">
+                    <li>
+                        <img src="./images/itemlike01.png" alt="">
+                        <a href="">DELL戴尔Ins 15MR-7528SS 15英寸 银色 笔记本</a>
+                        <p class="price">&yen;3699</p>
+                        <p class="comment"> 已有6人评价</p>
+                    </li>
+                    <li>
+                        <img src="./images/itemlike02.png" alt="">
+                        <a href="">DELL戴尔Ins 15MR-7528SS 15英寸 银色 笔记本</a>
+                        <p class="price">&yen;3699</p>
+                        <p class="comment"> 已有6人评价</p>
+                    </li>
+                    <li>
+                        <img src="./images/itemlike03.png" alt="">
+                        <a href="">DELL戴尔Ins 15MR-7528SS 15英寸 银色 笔记本</a>
+                        <p class="price">&yen;3699</p>
+                        <p class="comment"> 已有6人评价</p>
+                    </li>
+                    <li>
+                        <img src="./images/itemlike04.png" alt="">
+                        <a href="">DELL戴尔Ins 15MR-7528SS 15英寸 银色 笔记本</a>
+                        <p class="price">&yen;3699</p>
+                        <p class="comment"> 已有6人评价</p>
+                    </li>
+                    <li>
+                        <img src="./images/itemlike05.png" alt="">
+                        <a href="">DELL戴尔Ins 15MR-7528SS 15英寸 银色 笔记本</a>
+                        <p class="price">&yen;3699</p>
+                        <p class="comment"> 已有6人评价</p>
+                    </li>
+                    <li>
+                        <img src="./images/itemlike06.png" alt="">
+                        <a href="">DELL戴尔Ins 15MR-7528SS 15英寸 银色 笔记本</a>
+                        <p class="price">&yen;3699</p>
+                        <p class="comment"> 已有6人评价</p>
+                    </li>
+                </ul>
+            
+        </div>
+    </div>
+
+    <!-- 底部页脚 -->
+    <div class="footer">
+        <div class="container">
+            <div class="list">
+                <div class="item">
+                    <h3 class="title">购物流程</h3>
+                    <ul>
+                        <li><a href="">购物流程</a></li>                                                          </a></li>
+                        <li><a href="">会员介绍</a></li>
+                        <li><a href="">生活旅行/团购</a></li>
+                        <li><a href="">常见问题</a></li>
+                        <li><a href="">购物指南</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3 class="title">配送方式</h3>
+                    <ul>
+                        <li><a href="">上门自提</a></li>                                         
+                        <li><a href=""> 211限时达</a></li>
+                        <li><a href="">配送服务查询</a></li>
+                        <li><a href="">配送费收取标准</a></li>
+                        <li><a href="">海外配送</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3 class="title">支付方式</h3>
+                    <ul>
+                        <li><a href="">货到付款</a></li>                                                          </a></li>
+                        <li><a href="">在线支付</a></li>
+                        <li><a href="">分期付款</a></li>
+                        <li><a href=""> 邮局汇款</a></li>
+                        <li><a href="">公司转账</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3 class="title">售后服务</h3>
+                    <ul>
+                        <li><a href="">售后政策</a></li>                                                          </a></li>
+                        <li><a href="">价格保护</a></li>
+                        <li><a href="">退款说明</a></li>
+                        <li><a href="">返修/退换货</a></li>
+                        <li><a href="">取消订单</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3 class="title">特色服务</h3>
+                    <ul>
+                        <li><a href=""> 夺宝岛</a></li>                                                          </a></li>
+                        <li><a href="">DIY装机</a></li>
+                        <li><a href="">延保服务</a></li>
+                        <li><a href="">尚品汇E卡</a></li>
+                        <li><a href="">尚品汇通信</a></li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3 class="title">帮助中心</h3>
+                    <img src="./images/wx_cz.jpg" alt="">
+                </div>
+            </div>
+            <div class="message">
+               
+                    <a href="">关于我们</a>
+                    <a href="">联系我们</a>
+                    <a href="">关于我们</a>
+                    <a href="">商家入驻</a>
+                    <a href="">友情链接</a>
+                    <a href="">关于我们</a>
+                    <a href="">营销中心</a>
+                    <a href="">友情链接</a>
+                    <a href="">关于我们</a>
+              
+                <p class="address">地址：北京市昌平区宏福科技园综合楼6层</p>
+                <p class="copyright">京ICP备19006430号</p>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边导航栏 -->
+    <div class="page-aside" id="pageAside">
+       
+        <div class="left-side"  >
+          <span class="open-btn" id="openBtn"></span>
+            <ul class="icon-list">
+                <li class="nav-item">
+                    <i class="icon vip-icon"></i>
+                    <span>商城会员</span>
+                </li>
+                <li class="nav-item">
+                    <i class="icon shopcar-icon"></i>
+                    <span>购物车</span>
+                </li>
+                <li class="nav-item">
+                    <i class="icon follow-icon"></i>
+                    <span>我的关注</span>
+                </li>
+                <li class="nav-item">
+                    <i class="icon history-icon"></i>
+                    <span>我的足迹</span>
+                </li>
+                <li  class="nav-item">
+                    <i class="icon  message-icon"></i>
+                    <span>我的消息</span>
+                </li>
+                <li class="nav-item">
+                    <i class="icon  question-icon"></i>
+                    <span>咨询</span>
+                </li>
+            </ul>
+            <div class="nav-item to-top" id="toTop">
+                <i class="icon top-icon"></i>
+                <span>回到顶部</span>
+            </div>
+        </div>
+        <div class="content-side">
+        </div>
+    </div>
+    <script src="./js/data.js"></script>
+    <script src="./js/functions.js"></script>
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>
